@@ -1,4 +1,4 @@
-The bandit-project contains an implementation of the finite horizon k-bandit problem
+### The bandit-project contains an implementation of the finite horizon k-bandit problem
 
 ![0_l7Ra4R_CpJfc-hjz](https://github.com/user-attachments/assets/e18cee8e-f77f-4043-8f83-e307928a6e5b)
 
