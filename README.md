@@ -11,7 +11,7 @@ the below code implements the k-armed bandit problem which navigates the explora
 The optimal strategy to the problem challenges the agent to strike a balance of exploring the individual probability distributions of the different machines (exploration) and maximizing profits based on the information acquired so far (exploitation)
 
 Properties:
-currently, only supporting a stationary environment. Future updates will occur to allow the option of a non-stationary environment.
+- currently, only supporting a stationary environment. Future updates will occur to allow the option of a non-stationary environment.
 - a stationary environment means that the underlying true probabilities do not change over time so in our case, a non-stationary environment would mean that with each turn. The arms underlying probabilities would shift over turns
 - As the case with the historical k-bandit problem, our output for a pull is either 'success' or 'failure', in the future there will be an option for a continous variable output so that more policies can be applicable to the bandit environment
 
