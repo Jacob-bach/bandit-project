@@ -38,7 +38,7 @@ def bay_dp(world):
             tuple: (best_val, best_arm) representing the maximum expected future reward and the associated arm.
         """
         if remaining_pulls == 0:
-            return (0,-1)
+            return (0, None)
         
         # Convert state to a tuple so it can be a dict key.
         state_key = tuple(state)
@@ -78,7 +78,7 @@ def bay_dp(world):
         pulls_left = world.h - world.turn + 1
         _, best_arm_index = value(val_map, curr_state, pulls_left)                    # Compute best arm to pull
 
-        if best_arm_index is None or best_arm_index == -1:                            # Check if best_arm_index contains valid arm index
+        if best_arm_index is None:                            # Check if best_arm_index contains valid arm index
             raise ValueError("No best arm found. Check the value function or state representation.")
         
         world.pull(best_arm_index)                                                    # Interact with real environment
