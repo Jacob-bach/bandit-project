@@ -144,9 +144,10 @@ class Bandit:
         """
         prints the payouts of all RL strategies on current bandit environment.
         """
+        max_name_length = max([len(name) for name, _ in self.scores])
         print('---Strategy Performance---')
         for strategy_name, payout in self.scores:
-            print(f"Strategy: {strategy_name} | "
+            print(f"Strategy: {strategy_name:<{max_name_length}} | "
                   f"Total Payout: {payout} | "
                   f"Turns: {self.h}")
         print('---------------------------------')
